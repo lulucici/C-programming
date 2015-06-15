@@ -1,3 +1,4 @@
+//find the number who is same as x in array ,and input the smallest index.
 #include <stdio.h>
 int main(void)
 {
