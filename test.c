@@ -1,14 +1,15 @@
-#include <stdio.h>
-#include <math.h>
-int main(void)
+#include "stdio.h"
+int main(int argc, char const *argv[])
 {
-	int a=10,b,c;
+	int i,m,n;
 
-	 b=pow(10,2);
-	 c=round(pow(a,2));
-
-
-		printf("%d %d\n",b,c);
-
+	double sum;
+	scanf("%d%d", &m, &n);
+        sum = 0;	
+        for ( i = m; i <= n; i++)
+        {
+        	sum = sum +1/i;
+        }
+        printf("%.3f\n",sum );
 	return 0;
 }
