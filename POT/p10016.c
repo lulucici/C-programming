@@ -1,4 +1,4 @@
-//trans d to b
+/*trans d to b*/
 #include "stdio.h"
 int main(void)
 {

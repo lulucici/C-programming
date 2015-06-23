@@ -22,15 +22,14 @@ int main(void)
     scanf("%d", &repeat);
     for(ri = 1; ri <= repeat; ri++){
      	scanf("%d", &in);
-     	count = 1;
+     	count = 0;
      	do
      	{
-     		if ( in / 10 != 0)
-     		{
-     			count++;
-     			in = in / 10;
-     		}
-     	}while(in / 10 != 0);
+     	
+     		count++;
+     		in = in / 10;
+     	
+     	}while(in != 0);
      	printf("count = %d\n", count);
    }
 }
