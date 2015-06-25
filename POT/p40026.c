@@ -9,17 +9,54 @@
 输出：
 90=7+83 92=3+89 94=5+89 96=7+89 98=19+79
 100=3+97*/
-
-
 #include "stdio.h"
 #include "math.h"
+int prime(int i);
 int main(void)
 {
-    int count, i, j, k, m, n, number;
+    int count, i, m, n, number;
 
     scanf("%d%d", &m, &n);
     if(m % 2 != 0) m = m + 1;
-    if(m >= 6){
-/*---------*/
+    if(m >= 6)
+    {
+    	count = 0;
+    	for (number = m;number <= n;number = number + 2)
+    	{
+    		for (i= 3;i <= number / 2;i = i + 2)
+    		{
+    			if (prime(i) == 1 && prime(number - i) == 1)
+    			{
+    				printf("%d=%d+%d ", number, i, number - i);
+    				count++;
+    				break;
+    			}
+    		}
+    		if (count % 5 == 0)
+    		{
+    			printf("\n");
+    		}
+    	}
     }
+}
+int prime(int i)
+{
+	int result;
+	int k;
+	for (k = 2;k <= i / 2;k++)
+	{
+		if ( i % k == 0)
+		{
+			break;
+		}
+	}
+	if ( k >i / 2)
+	{
+		result = 1;
+	}
+	else
+	{
+		result = 0;
+	}
+	return result;
 }
