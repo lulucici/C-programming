@@ -1,57 +1,23 @@
 #include <stdio.h>
-double fact(int n);
-double multi(int n);
 int main()
 {
-	double item;
-    int i,j;
-            scanf("%d",&i);
-            j = 2i + 1;
-            printf("%d\n",j );
-             item = multi(j);
+    int a = 1,b = 2;
+    int *pa = &a,*pb = &b;
 
-             printf("%lf\n",item );
+    void swap1(int x,int y),swap2(int *px,int *py),swap3(int *px,int *py);
 
-	
+
 }
 
-double fact(int n)
+void swap1(int x,int y)
 {
-    double result;
-    int i;
+    int t;
+    t = x;
+    x = y;
+    y = t;
+}
 
-    if (n == 0)
-    {
-        result = 1;
-    }
-    else
-    {
-        result = 1;
-        for (i = 1;i <= n; i++)
-        {
-            result = result * i;
-        }
-    }
-    return result;
+void swap2(int *px,int *py)
+{
     
-}
-
-double multi(int n)
-{
-    double result;
-    int i;
-
-    if ( n == 0)
-    {
-        result = 1;
-    }
-    else
-    {
-        result = 1;
-        for (i = 1;i <=  n; i = i + 2)
-        {
-            result = result * i;
-        }
-    }
-    return result;
 }
